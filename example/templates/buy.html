@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <style class="margin">
+        .margin {
+            margin: 10px;
+        }
+    </style>
+    <main class="container py-5 text-center">
+        <form action="/buy" method="post">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto margin" name="symbol" placeholder="Symbol" type="text">
+            </div>
+            <div class="mb-3">
+                <input placeholder="Shares" class="form-control mx-auto w-auto margin" autocomplete="off" name="shares" type="number">
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary margin" type="submit">Buy</button>
+            </div>
+
+        </form>
+    </main>
+{% endblock %}

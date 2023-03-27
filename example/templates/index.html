@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+    <main class="container py-5 text-center">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="text-start" >Symbol</th>
+                    <th class="text-start" >Name</th>
+                    <th class="text-end">Shares</th>
+                    <th class="text-end" >Price</th>
+                    <th class="text-end" >TOTAL</th>
+                </tr>
+            </thead>
+            <tbory>
+                {% for c in range(quant) %}
+                    {% if info_shares[c]['total'] != 0 %}
+                        <tr>
+                            <td class="text-start"> {{ info_shares[c]['symbol'] }}</td>
+                            <td class="text-start"> {{ info_shares[c]['name'] }}</td>
+                            <td class="text-end">   {{ info_shares[c]['quantity'] }}</td>
+                            <td class="text-end">   {{ info_shares[c]['price'] | usd }}</td>
+                            <td class="text-end">   {{ info_shares[c]['total'] | usd }}</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </tbory>
+
+            <tfoot>
+                <tr>
+                    <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
+                    <td class="border-0 text-end">{{ money | usd }}</td>
+                </tr>
+
+                <tr>
+                    <td class="border-0 fw-bold text-end" colspan="4">TOTAL</td>
+                    <td class="border-0 w-bold text-end">{{ total | usd }}</td>
+                </tr>
+            </tfoot>
+
+        </table>
+    </main>
+{% endblock %}
