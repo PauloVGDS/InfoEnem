@@ -9,18 +9,39 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/knowledge")
-def knowledge():
-    return render_template("knowledge.html")
+@app.route("/matematica")
+def matematica():
+    return render_template("matematica.html")
 
+@app.route("/portugues")
+def portugues():
+    return render_template("portugues.html")
 
-@app.route("/projects")
-def projects():
-    return render_template("projects.html")
+@app.route("/geografia")
+def geografia():
+    return render_template("geografia.html")
 
+@app.route("/historia")
+def historia():
+    return render_template("historia.html")
 
+@app.route("/fisica")
+def fisica():
+    return render_template("fisica.html")
 
-@app.route("/contacts")
-def contacts():
-    return render_template("contacts.html")
+@app.route("/quimica")
+def quimica():
+    return render_template("quimica.html")
+
+@app.route("/biologia")
+def biologia():
+    return render_template("biologia.html")
+
+@app.route("/sociologia")
+def sociologia():
+    return render_template("sociologia.html")
+
+@app.route("/filosofia")
+def filosifia():
+    return render_template("filosofia.html")
 
