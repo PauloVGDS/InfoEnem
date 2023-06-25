@@ -1,2 +1,2 @@
 # CS50finalProject
-My CS50 final project
+My final CS50 project made in HTML/CSS, Python and Flask
