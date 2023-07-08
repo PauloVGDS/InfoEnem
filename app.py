@@ -8,6 +8,13 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route("/contato")
+def contato():
+    return render_template("contato.html")
+
+@app.route("/sobre")
+def sobre():
+    return render_template("sobre.html")
 
 @app.route("/matematica")
 def matematica():
@@ -42,6 +49,6 @@ def sociologia():
     return render_template("sociologia.html")
 
 @app.route("/filosofia")
-def filosifia():
+def filosofia():
     return render_template("filosofia.html")
 
