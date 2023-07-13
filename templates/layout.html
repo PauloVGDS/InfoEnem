@@ -1,189 +1,222 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/static/index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>{% block title %}{% endblock %}</title>
+  </head>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/static/index.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <title>{% block title %}{% endblock %}</title>
-    </head>
+  <body class="row" data-bs-theme="light" id="body" data-bs-translation="pt-br">
+    <nav class="navbar navbar-expand-md navbar-light m-auto bg-body-secondary">
+      <div class="container d-flex flex-row flex-wrap"> <!-- Main div of the navbar-->
+        <div class="container-sm-9 m-auto py-4">
+          <a href="/" class="navbar-brand m-auto"
+            ><img
+              src="https://logodownload.org/wp-content/uploads/2015/02/enem-logo-4.png"
+              alt="Enem-Logo"
+              width="250"
+          /></a>
+        </div>
 
-    <body class="row" data-bs-theme="light" id="body" data-bs-translation="pt-br">
-      <script>
-        const element = document.body;
-        element.dataset.bsTheme = localStorage.getItem('theme')
-        element.dataset.bsTranslation = localStorage.getItem("lang")
-        
-      </script>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            
-            <div class="container d-flex flex-row p-2">
-                <a href="/" class="navbar-brand">
-                    <img src="https://logodownload.org/wp-content/uploads/2015/02/enem-logo-4.png" alt="Enem-Logo" width="250">
-                </a>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav align-items-center ml-auto">
+            <li class="nav-item">
+              <a href="/" class="nav-link m-3" id="navText1">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/contato" class="nav-link m-3" id="navText2">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a href="/sobre" class="nav-link m-3" id="navText3">About</a>
+            </li>
+          </ul>
+        </div>
 
-                <button class="m-1 p-2 d-flex align-items-end navbar-toggler" onclick="swithLanguage()">
-                  <span class="material-symbols-outlined">
-                    g_translate
-                  </span>
-                </button>
-                <button class="m-1 p-2 d-flex align-items-center navbar-toggler" onclick="swithTheme()">
-                  <span class="material-symbols-outlined">
-                    light_mode                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                  </span>
-                </button>
+        <div class="container-sm-3 m-auto p-3 d-flex bs-emphasis">
+          <button
+            class="d-flex align-items-center navbar-toggler"
+            onclick="switchLanguage()"
+          >
+            <span class="material-symbols-outlined">g_translate</span>
+            <!-- Botão de Switch translation -->
+          </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto p-2 ">
-                            <li class="nav-item m-auto">
-                                <a href="/" class="nav-link px-4 active" id="navText1">Home</a>
-                            </li>
-                            <li class="nav-item m-auto">
-                                <a href="/contato" class="nav-link px-4" id="navText2">Contact</a>
-                            </li>
-                            <li class="nav-item m-auto">
-                                <a href="/sobre" class="nav-link px-4" id="navText3">About</a>
-                            </li>
-                        </ul>
-                </div>
+          <button
+            class="navbar-toggler d-flex align-items-center m-auto d-sm-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navodata-bs-toggle="
+          >
+            <span class="navbar-toggler-icon"></span>
+            <!-- botão de Toggle Navbar -->
+          </button>
 
-              </div>
+          <button
+            class="d-flex align-items-center navbar-toggler"
+            onclick="switchTheme()"
+            id="themeIcon"
+          >
+            <span class="material-symbols-outlined"></span>
+            <!-- botão de Switch Theme -->
+          </button>
+        </div>
+      </div>
+    </nav>
 
-            
-        </nav>
+    <aside class="bd-sidebar col-sm-3 ms-auto mt-4">
+      <ul class="list-group text-center" id="listGroup">
+        <li class="list-group-item list-group-item-action" id="matematica">
+          <a href="/matematica" class="nav-link">Matemática</a>
+        </li>
+        <li class="list-group-item list-group-item-action" id="portugues">
+          <a href="/portugues" class="nav-link">Português</a>
+        </li>
+        <li class="list-group-item list-group-item-action" id="geografia">
+          <a href="/geografia" class="nav-link">Geografia</a>
+        </li>
+        <li class="list-group-item list-group-item-action" id="historia">
+          <a href="/historia" class="nav-link">História</a>
+        </li>
+        <li class="list-group-item list-group-item-action" id="biologia">
+          <a href="/biologia" class="nav-link">Biologia</a>
+        </li>
+        <li class="list-group-item list-group-item-action" id="fisica">
+          <a href="/fisica" class="nav-link">Física</a>
+        </li>
+        <li class="list-group-item list-group-item-action" id="quimica">
+          <a href="/quimica" class="nav-link">Química</a>
+        </li>
+        <li class="list-group-item list-group-item-action" id="filosofia">
+          <a href="/filosofia" class="nav-link">Filosofia</a>
+        </li>
+        <li class="list-group-item list-group-item-action" id="sociologia">
+          <a href="/sociologia" class="nav-link">Sociologia</a>
+        </li>
+      </ul>
+    </aside>
 
-        <aside class="bd-sidebar col-3 py-5 bg-primary">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="/matematica" class="nav-link">Matemática</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/portugues" class="nav-link">Português</a>
-                </li>                                            
-                <li class="nav-item">
-                    <a href="/geografia" class="nav-link">Geografia</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/historia" class="nav-link">História</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/biologia" class="nav-link">Biologia</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/fisica" class="nav-link">Física</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/quimica" class="nav-link">Química</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/filosofia" class="nav-link">Filosofia</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/sociologia" class="nav-link">Sociologia</a>
-                </li>
+    <main
+      class="container col-sm-7 lg-6 m-auto mt-4 p-3 d-flex bg-body-secondary"
+    >
+      {% block main %}{% endblock %}
+    </main>
+
+    <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+      <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+        <div class="row">
+          <div class="col-lg-3 mb-3">
+            <a
+              class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none"
+              href="/"
+              aria-label="Bootstrap"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="32"
+                class="d-block me-2"
+                viewBox="0 0 118 94"
+                role="img"
+              >
+                <title>Bootstrap</title>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <span class="fs-5">Bootstrap</span>
+            </a>
+            <ul class="list-unstyled small">
+              <li class="mb-2">
+                Designed and built with all the love in the world by the
+                <a href="/docs/5.3/about/team/">Bootstrap team</a> with the help
+                of
+                <a href="https://github.com/twbs/bootstrap/graphs/contributors"
+                  >our contributors</a
+                >.
+              </li>
+              <li class="mb-2">
+                Code licensed
+                <a
+                  href="https://github.com/twbs/bootstrap/blob/main/LICENSE"
+                  target="_blank"
+                  rel="license noopener"
+                  >MIT</a
+                >, docs
+                <a
+                  href="https://creativecommons.org/licenses/by/3.0/"
+                  target="_blank"
+                  rel="license noopener"
+                  >CC BY 3.0</a
+                >.
+              </li>
+              <li class="mb-2">Currently v5.3.0.</li>
             </ul>
-        </aside>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-        <main class="container-fluid py-5 text-center col-6">
-            {% block main %}{% endblock %}
-        </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const page = document.location.pathname;
+      localStorage.setItem("currentPage", page.substring(1, page.length));
 
-            
-        <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
-            <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
-              <div class="row">
-                <div class="col-lg-3 mb-3">
-                  <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/" aria-label="Bootstrap">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
-                    <span class="fs-5">Bootstrap</span>
-                  </a>
-                  <ul class="list-unstyled small">
-                    <li class="mb-2">Designed and built with all the love in the world by the <a href="/docs/5.3/about/team/">Bootstrap team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</li>
-                    <li class="mb-2">Code licensed <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
-                    <li class="mb-2">Currently v5.3.0.</li>
-                  </ul>
-                </div>
-                <div class="col-6 col-lg-2 offset-lg-1 mb-3">
-                  <h5>Links</h5>
-                  <ul class="list-unstyled">
-                    <li class="mb-2"><a href="/">Home</a></li>
-                    <li class="mb-2"><a href="/docs/5.3/">Docs</a></li>
-                    <li class="mb-2"><a href="/docs/5.3/examples/">Examples</a></li>
-                    <li class="mb-2"><a href="https://icons.getbootstrap.com/">Icons</a></li>
-                    <li class="mb-2"><a href="https://themes.getbootstrap.com/">Themes</a></li>
-                    <li class="mb-2"><a href="https://blog.getbootstrap.com/">Blog</a></li>
-                    <li class="mb-2"><a href="https://cottonbureau.com/people/bootstrap">Swag Store</a></li>
-                  </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                  <h5>Guides</h5>
-                  <ul class="list-unstyled">
-                    <li class="mb-2"><a href="/docs/5.3/getting-started/">Getting started</a></li>
-                    <li class="mb-2"><a href="/docs/5.3/examples/starter-template/">Starter template</a></li>
-                    <li class="mb-2"><a href="/docs/5.3/getting-started/webpack/">Webpack</a></li>
-                    <li class="mb-2"><a href="/docs/5.3/getting-started/parcel/">Parcel</a></li>
-                    <li class="mb-2"><a href="/docs/5.3/getting-started/vite/">Vite</a></li>
-                  </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                  <h5>Projects</h5>
-                  <ul class="list-unstyled">
-                    <li class="mb-2"><a href="https://github.com/twbs/bootstrap">Bootstrap 5</a></li>
-                    <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev">Bootstrap 4</a></li>
-                    <li class="mb-2"><a href="https://github.com/twbs/icons">Icons</a></li>
-                    <li class="mb-2"><a href="https://github.com/twbs/rfs">RFS</a></li>
-                    <li class="mb-2"><a href="https://github.com/twbs/examples/">Examples repo</a></li>
-                  </ul>
-                </div>
-                <div class="col-6 col-lg-2 mb-3">
-                  <h5>Community</h5>
-                  <ul class="list-unstyled">
-                    <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues">Issues</a></li>
-                    <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions">Discussions</a></li>
-                    <li class="mb-2"><a href="https://github.com/sponsors/twbs">Corporate sponsors</a></li>
-                    <li class="mb-2"><a href="https://opencollective.com/bootstrap">Open Collective</a></li>
-                    <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5">Stack Overflow</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </footer>
-        
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-        <script>
-          function swithTheme() {
-            const element = document.body;
-            element.dataset.bsTheme =
-              element.dataset.bsTheme == "light" ? "dark" : "light";
-              localStorage.setItem("theme", element.dataset.bsTheme)
-              }
+      function switchTheme() {
+        const element = document.body;
+        const spn = document.querySelector("#themeIcon span");
 
+        element.dataset.bsTheme =
+          element.dataset.bsTheme == "light" ? "dark" : "light";
 
-          function swithLanguage() {
-            let lang = document.body
-            
-            lang.dataset.bsTranslation = 
-            lang.dataset.bsTranslation == "pt-br" ? "en" : 'pt-br'
-            localStorage.setItem("lang", lang.dataset.bsTranslation)
-            for (let i = 0; i < ptBr.length; i++) {
-              let text = document.querySelector(ptBr[c])
-              text.textContent = ptBr[c].value
-            }
-            
-          }
-        
-          let ptBr = {'#navText1' : 'Início', '#navText2' : 'Contato', '#navText' : 'Sobre', 'introText' : 'Introdução'}
+        spn.textContent =
+          localStorage.getItem("theme") === "light"
+            ? "light_mode"
+            : "dark_mode";
 
-          let en = {'#navText1' : 'Home', '#navText2' : 'Contat', '#navText' : 'About', 'introText' : 'Introduction'}
+        localStorage.setItem("theme", element.dataset.bsTheme);
+      }
 
+      function switchLanguage() {
+        let lang = document.body;
+        lang.dataset.bsTranslation =
+          lang.dataset.bsTranslation == "pt-br" ? "en" : "pt-br";
+        localStorage.setItem("lang", lang.dataset.bsTranslation);
+      }
 
-        </script>
-    </body>
+      const element = document.body;
+      element.dataset.bsTheme = localStorage.getItem("theme");
+      element.dataset.bsTranslation = localStorage.getItem("lang");
 
+      document.addEventListener("DOMContentLoaded", () => {
+        const spn = document.querySelector("#themeIcon span");
+        spn.textContent =
+          localStorage.getItem("theme") == "light" ? "dark_mode" : "light_mode";
+      });
+    </script>
+  </body>
 </html>
