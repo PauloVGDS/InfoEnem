@@ -3,6 +3,7 @@
     Introdução 
 {% endblock %} 
 
+
 {% block main %}
 
     <div id="container">
@@ -54,5 +55,49 @@
         aqui para ajudá-lo(a) a conquistar um futuro brilhante!
     </p>
     </div>
+
+{% endblock %}
+
+
+{% block aside %} 
+
+    <aside class="bd-sidebar col-sm-3 m-auto mt-4">
+        <ul class="list-group text-center" id="listGroup">
+        <li class="list-group-item list-group-item-action" id="matematica">
+            <a href="/matematica" class="nav-link">Matemática</a>
+        </li>
+        <li class="list-group-item list-group-item-action" id="portugues">
+            <a href="/portugues" class="nav-link">Português</a>
+        </li>
+        <li class="list-group-item list-group-item-action" id="geografia">
+            <a href="/geografia" class="nav-link">Geografia</a>
+        </li>
+        <li class="list-group-item list-group-item-action" id="historia">
+            <a href="/historia" class="nav-link">História</a>
+        </li>
+        <li class="list-group-item list-group-item-action" id="biologia">
+            <a href="/biologia" class="nav-link">Biologia</a>
+        </li>
+        <li class="list-group-item list-group-item-action" id="fisica">
+            <a href="/fisica" class="nav-link">Física</a>
+        </li>
+        <li class="list-group-item list-group-item-action" id="quimica">
+            <a href="/quimica" class="nav-link">Química</a>
+        </li>
+        <li class="list-group-item list-group-item-action" id="filosofia">
+            <a href="/filosofia" class="nav-link">Filosofia</a>
+        </li>
+        <li class="list-group-item list-group-item-action" id="sociologia">
+            <a href="/sociologia" class="nav-link">Sociologia</a>
+        </li>
+        </ul>
+    </aside>
+
+    <script>
+        let el = document.querySelector('#textLink')
+        el.classList.add('ativado')
+        el.style['font-weight'] = 'bold'
+        el.style.color = '#044884'
+    </script>
 
 {% endblock %}
