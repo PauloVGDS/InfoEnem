@@ -5,42 +5,20 @@
 
 
 {% block main %}
+    <div>
+      <h1 class="card-title" id="introText">
+        Bem-vindo ao EnemInfo, o seu guia completo para o Enem!
+      </h1>
 
-    <div id="container">
-    <div class="card text-bg-white">
-        <div class="card-body">
-        <h5 class="card-title" id="introText">
-            Bem-vindo ao EnemInfo, o seu guia completo para o Enem!
-        </h5>
-        <p>
-            Estudar para o Exame Nacional do Ensino Médio pode ser uma tarefa
-            desafiadora, mas com as informações certas ao seu alcance, você estará
-            um passo à frente na preparação.
-        </p>
-        </div>
     </div>
+        
 
     <p>
         Aqui no EnemInfo, você encontrará detalhes sobre as principais matérias que
         são abordadas no exame, como Matemática, Português e Literatura, História,
         Geografia, Ciências da Natureza (Química, Física e Biologia), Ciências
         Humanas (Sociologia, Filosofia, etc.) e Língua Estrangeira (Inglês ou
-        Espanhol). Para cada matéria, oferecemos um conteúdo completo e organizado,
-        com informações teóricas, exemplos práticos, dicas de estudo e muito mais.
-    </p>
-
-    <p>
-        Nosso objetivo é ajudar você a compreender os principais conceitos,
-        desenvolver habilidades analíticas e fornecer recursos valiosos para o seu
-        aprendizado. Queremos que você se sinta confiante e preparado(a) para
-        enfrentar o Enem e obter o melhor resultado possível.
-    </p>
-
-    <p>
-        Além das informações das matérias, o EnemInfo também oferece dicas de
-        estudo, orientações sobre a estrutura do exame, recomendações de livros e
-        materiais complementares, e até mesmo simulados para você praticar e se
-        familiarizar com o formato das questões.
+        Espanhol).
     </p>
 
     <p>
@@ -56,48 +34,15 @@
     </p>
     </div>
 
-{% endblock %}
 
 
-{% block aside %} 
-
-    <aside class="bd-sidebar col-sm-3 m-auto mt-4">
-        <ul class="list-group text-center" id="listGroup">
-        <li class="list-group-item list-group-item-action" id="matematica">
-            <a href="/matematica" class="nav-link">Matemática</a>
-        </li>
-        <li class="list-group-item list-group-item-action" id="portugues">
-            <a href="/portugues" class="nav-link">Português</a>
-        </li>
-        <li class="list-group-item list-group-item-action" id="geografia">
-            <a href="/geografia" class="nav-link">Geografia</a>
-        </li>
-        <li class="list-group-item list-group-item-action" id="historia">
-            <a href="/historia" class="nav-link">História</a>
-        </li>
-        <li class="list-group-item list-group-item-action" id="biologia">
-            <a href="/biologia" class="nav-link">Biologia</a>
-        </li>
-        <li class="list-group-item list-group-item-action" id="fisica">
-            <a href="/fisica" class="nav-link">Física</a>
-        </li>
-        <li class="list-group-item list-group-item-action" id="quimica">
-            <a href="/quimica" class="nav-link">Química</a>
-        </li>
-        <li class="list-group-item list-group-item-action" id="filosofia">
-            <a href="/filosofia" class="nav-link">Filosofia</a>
-        </li>
-        <li class="list-group-item list-group-item-action" id="sociologia">
-            <a href="/sociologia" class="nav-link">Sociologia</a>
-        </li>
-        </ul>
-    </aside>
 
     <script>
         let el = document.querySelector('#textLink')
         el.classList.add('ativado')
-        el.style['font-weight'] = 'bold'
+        el.style['font-weight'] = '700'
         el.style.color = '#044884'
     </script>
 
 {% endblock %}
+
