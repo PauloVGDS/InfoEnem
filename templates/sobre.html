@@ -6,7 +6,6 @@
 
 {% block main %}
 
-  
   <div class="mb-4 lg-6 m-auto" style="max-width: 90%;">
     <div class="row">
       <div class="col-md-4 d-flex justify-content-center align-items-center p-4">
@@ -23,17 +22,12 @@
     </div>
   </div>
 
-
-
-
-    
+    <!-- Script para estilização do botão da página atual -->
     <script>
-        let el = document.querySelector('#textLink-sobre')
-        el.classList.add('ativado')
-
-
-        let main = document.querySelector('main')
-        main.classList.remove('container')
-        main.style.width ='100%'
+        let el = document.querySelector('#aboutAnchor')
+        el.style['font-weight'] = '700'
+        el.style.color = '#044884'
+        el.style["box-shadow"] = "0px 0px 8px #044884"
+        el.style["border-radius"] = '5px'
     </script>
 {% endblock %}

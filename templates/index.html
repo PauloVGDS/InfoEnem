@@ -5,43 +5,272 @@
 
 
 {% block main %}
+    <!-- Título da página -->
     <div>
       <h1 class="card-title" id="introText">
-        Bem-vindo ao EnemInfo, o seu guia completo para o Enem!
+        Bem-vindo ao <a href="/" id="logoText">EnemInfo</a>, o seu guia completo!
       </h1>
+    </div>
+    <!-- Contéudo 1 -->
+    <p id="textContent">
+      Estamos aqui para tornar a sua jornada de preparação para o Enem mais <a href="#" id="contrastWord">eficiente</a>. Então, não perca tempo, explore o EnemInfo e comece a se
+      preparar de forma estruturada e <a href="#" id="contrastWord">organizada</a>. Estamos ao seu lado nessa
+      jornada rumo ao <a href="#" id="contrastWord">sucesso</a> no Enem!
+    </p>
+    <!-- Cards -->
+    <div class="card-group mt-3">
+      <div class="card">
+        <svg width="320" height="300" viewBox="0 0 320 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="320" height="300" fill="#8FB3FF"/>
+          <path d="M249.6 147H306.133" stroke="#044884" stroke-width="6" stroke-linecap="round"/>
+          <path d="M242.133 122.5L295.467 77" stroke="#044884" stroke-width="6" stroke-linecap="round"/>
+          <path d="M216 115.5V56" stroke="#044884" stroke-width="6" stroke-linecap="round"/>
+          <rect x="25.4668" y="133" width="204" height="72" fill="white" stroke="black" stroke-width="4"/>
+          <path d="M90.6665 177.573L112.355 192L164.266 147" stroke="#044884" stroke-width="8" stroke-linecap="round"/>
+          </svg>
+          
+          
+        <div class="card-body">
+          <h5 class="card-title text-center">Simples</h5>
+          <p class="card-text">O site tem o seu conteúdo disponível de uma forma simples e fácil para que você possa estudar da maneira mais objetiva possível!</p>
+        </div>
+      </div>
+      <div class="card">
+        <svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M300 0H0V300H300V0Z" fill="#8FB3FF"/>
+          <path d="M250 150.5C250 205.728 205.228 250.5 150 250.5C94.7715 250.5 50 205.728 50 150.5C50 95.2715 94.7715 50.5 150 50.5C205.228 50.5 250 95.2715 250 150.5Z" fill="#044884" stroke="black" stroke-width="4"/>
+          <mask id="mask0_145_112" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="48" y="50" width="204" height="205">
+          <path d="M250 152.5C250 207.728 205.228 252.5 150 252.5C94.7715 252.5 50 207.728 50 152.5C50 97.2715 94.7715 52.5 150 52.5C205.228 52.5 250 97.2715 250 152.5Z" fill="#8FB3FF" stroke="black" stroke-width="4"/>
+          </mask>
+          <g mask="url(#mask0_145_112)">
+          <path d="M257.5 59.5L150 150.5V13.5L257.5 59.5Z" fill="white" stroke="black" stroke-width="4"/>
+          </g>
+          </svg>
+          
+          
+          
+        <div class="card-body">
+          <h5 class="card-title text-center">Rápido</h5>
+          <p class="card-text">Para ganhar tempo de estudar o contéudo é posicionado visando a rapidez e praticidade com o conteúdo de todas as matérias!</p>
+        </div>
+      </div>
+      <div class="card">
+        <svg width="320" height="300" viewBox="0 0 320 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="320" height="300" fill="#8FB3FF"/>
+          <path d="M249.6 147H306.133" stroke="#044884" stroke-width="6" stroke-linecap="round"/>
+          <path d="M242.133 122.5L295.467 77" stroke="#044884" stroke-width="6" stroke-linecap="round"/>
+          <path d="M216 115.5V56" stroke="#044884" stroke-width="6" stroke-linecap="round"/>
+          <rect x="25.4668" y="133" width="204" height="72" fill="white" stroke="black" stroke-width="4"/>
+          <path d="M90.6665 177.573L112.355 192L164.266 147" stroke="#044884" stroke-width="8" stroke-linecap="round"/>
+          </svg>
+          
+          
+        <div class="card-body">
+          <h5 class="card-title text-center">Organizado</h5>
+          <p class="card-text">Organizado estrategicamente para você não se perder nos estudos e aproveitar da melhor forma, assim alcançando seus objetivos!</p>
+        </div>
+      </div>
+    </div>
+    <!-- Conteúdo 2 -->
+    <p id="textContent">
+      Aqui no <a href="#" id="contrastWord" >EnemInfo</a>, você encontrará detalhes sobre as <a href="#" id="contrastWord">principais</a> matérias que
+      são abordadas no exame, como Matemática, Português e Literatura, História,
+      Geografia, Ciências da Natureza (Química, Física e Biologia), Ciências
+      Humanas (Sociologia, Filosofia, etc.) e Língua Estrangeira (Inglês ou
+      Espanhol).
+    </p>
+    <!-- Listagem das matérias-->
+    <div class="accordion accordion-flush" id="accordionFlush">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Linguagens, Códigos e suas Tecnologias
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+              <!-- Conteúdo aqui -->
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Machado_de_Assis_1904.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        <a href="/portugues">Português</a>
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="https://www.sescrio.org.br/wp-content/uploads/2021/02/curso-ingles-espanhol-550x330.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        <a href="/ingles" class="accordion-link">Inglês e Espanhol</a>
+                      </h5>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="https://cdn.goconqr.com/uploads/media/image/45127922/desktop_1df24d74-cc8a-4fb3-8aa1-cf0cfaec6664.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        <a href="/artes">Artes e Literatura</a>
+                      </h5>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Ciências Humanas e suas Tecnologias
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <!-- Conteúdo aqui -->
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card h-100">
+                  <img src="https://static.significados.com.br/foto/filosofia-medieval-og.jpg?class=ogImageWide" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <a href="/historia">História</a>
+                    </h5>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="https://www.worldmapsonline.com/product_images/uploaded_images/image2.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <a href="/geografia">Geografia</a>
+                    </h5>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="https://s1.static.brasilescola.uol.com.br/be/2021/09/rene-decartes.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <a href="/filosofia">Filosofia</a>
+                    </h5>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="card mt-4">
+              <img src="https://media-assets.wired.it/photos/615f2e00db59bffc51c35ca9/master/w_1600%2Cc_limit/1525430073_GettyImages-514679914-tag.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="/sociologia">Sociologia</a>
+                </h5>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Ciências da Natureza e suas Tecnologias
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <!-- Conteúdo aqui -->
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card h-100">
+                  <img src="https://wallpaperaccess.com/full/893205.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <a href="/fisica">Física</a>
+                    </h5>
+                    <p class="card-text"></p>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="https://cdn.thecollector.com/wp-content/uploads/2023/02/how-leonardo-davinci-scientific-innovations.jpg?width=1400&quality=70" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <a href="/biologia">Biologia</a>
+                    </h5>
+                    <p class="card-text"></p>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="https://council.science/wp-content/uploads/2017/04/IUPAC-feature-image-1400x600.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <a href="/quimica">Química</a>
+                    </h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFourt">
+            Matemática e suas Tecnologias
+          </button>
+        </h2>
+        <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <!-- Conteúdo aqui -->
+            <div class="card">
+              <img src="https://img.myloview.com/murals/mathematical-vector-seamless-background-with-handwritten-algebra-and-geometry-formulas-on-a-white-paper-700-181359196.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="/matematica">Matematica</a>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
-        
-
-    <p>
-        Aqui no EnemInfo, você encontrará detalhes sobre as principais matérias que
-        são abordadas no exame, como Matemática, Português e Literatura, História,
-        Geografia, Ciências da Natureza (Química, Física e Biologia), Ciências
-        Humanas (Sociologia, Filosofia, etc.) e Língua Estrangeira (Inglês ou
-        Espanhol).
+    <!-- Conteúdo 3 -->
+    <p id="textContent">
+      Prepare-se, estude com <a href="#" id="contrastWord" >confiança</a> e alcance seus objetivos. O EnemInfo está
+      aqui para ajudá-lo(a) a conquistar um <a href="#" id="contrastWord">futuro brilhante</a>!
     </p>
-
-    <p>
-        Estamos aqui para tornar a sua jornada de preparação para o Enem mais suave
-        e eficiente. Então, não perca tempo, explore o EnemInfo e comece a se
-        preparar de forma estruturada e organizada. Estamos ao seu lado nessa
-        jornada rumo ao sucesso no Enem!
-    </p>
-
-    <p>
-        Prepare-se, estude com confiança e alcance seus objetivos. O EnemInfo está
-        aqui para ajudá-lo(a) a conquistar um futuro brilhante!
-    </p>
-    </div>
-
-
-
-
+    <!-- Script pra estilo do botão da página atual-->
     <script>
-        let el = document.querySelector('#textLink')
-        el.classList.add('ativado')
+        let el = document.querySelector('#homeAnchor')
         el.style['font-weight'] = '700'
         el.style.color = '#044884'
+        el.style["box-shadow"] = "0px 0px 8px #044884"
+        el.style["border-radius"] = '5px'
     </script>
 
 {% endblock %}

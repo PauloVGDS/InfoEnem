@@ -22,10 +22,11 @@
   </head>
 
   <body data-bs-theme="light" id="body" data-bs-translation="pt-br">
-      
-      
+    <!-- Self navbar-->
     <nav class="navbar navbar-expand-md navbar-light ml-auto mr-auto bg-body-secondary">
-      <div class="container d-flex flex-row flex-wrap"> <!-- Main div of the navbar-->
+      <!-- Main navbar div-->
+      <div class="container d-flex flex-row"> 
+        <!-- Div of the logo img -->
         <div class="container-sm-9 m-auto py-4">
           <a href="/" class="navbar-brand m-auto"
             ><img
@@ -34,35 +35,37 @@
               width="250"
           /></a>
         </div>
-
+        <!-- Div from list of anchors -->
         <div
           class="collapse navbar-collapse justify-content-center"
           id="navbarSupportedContent"
         >
           <ul class="navbar-nav align-items-center ml-auto">
             <li class="nav-item">
-              <a href="/" class="nav-link m-3" id="textLink">Home</a>
+              <a href="/" class="nav-link m-3" id="homeAnchor">Home</a>
             </li>
             <li class="nav-item">
-              <a href="/contato" class="nav-link m-3" id="textLink-contato">Contact</a>
+              <a href="/contato" class="nav-link m-3" id="contactAnchor">Contact</a>
             </li>
             <li class="nav-item">
-              <a href="/sobre" class="nav-link m-3" id="textLink-sobre">About</a>
+              <a href="/sobre" class="nav-link m-3" id="aboutAnchor">About</a>
             </li>
           </ul>
         </div>
+        <!-- Div of the buttons-->
+        <div class="container-sm-3 m-auto p-3 d-flex" id="navbarBtn">
 
-        <div class="container-sm-3 m-auto p-3 d-flex bs-emphasis">
+          <!-- Botão de Switch translation -->
           <button
-            class="d-flex align-items-center navbar-toggler"
+            class="d-flex align-items-center justify-content-center navbar-toggler"
             onclick="switchLanguage()"
           >
             <span class="material-symbols-outlined">g_translate</span>
-            <!-- Botão de Switch translation -->
           </button>
 
+          <!-- botão de Toggle Navbar -->
           <button
-            class="navbar-toggler d-flex align-items-center m-auto d-sm-none"
+            class="navbar-toggler d-flex align-items-center justify-content-center m-auto d-sm-none"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -71,7 +74,6 @@
             aria-label="Toggle navodata-bs-toggle="
           >
             <span class="navbar-toggler-icon"></span>
-            <!-- botão de Toggle Navbar -->
           </button>
 
           <button
