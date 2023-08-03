@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
+  
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,7 +22,7 @@
     <title>{% block title %}{% endblock %}</title>
   </head>
 
-  <body data-bs-theme="light" id="body" data-bs-translation="pt-br">
+  <body data-bs-theme="light" id="body">
     <!-- Self navbar-->
     <nav class="navbar navbar-expand-md navbar-light ml-auto mr-auto bg-body-secondary">
       <!-- Main navbar div-->
@@ -30,8 +31,8 @@
         <div class="container-sm-9 m-auto py-4">
           <a href="/" class="navbar-brand m-auto"
             ><img
-              src="https://logodownload.org/wp-content/uploads/2015/02/enem-logo-4.png"
-              alt="Logo"
+              src="/static/Images/Enem Logo.png"
+              alt="Enem Logo"
               width="250"
           /></a>
         </div>
@@ -55,14 +56,6 @@
         <!-- Div of the buttons-->
         <div class="container-sm-3 m-auto p-3 d-flex" id="navbarBtn">
 
-          <!-- Botão de Switch translation -->
-          <button
-            class="d-flex align-items-center justify-content-center navbar-toggler"
-            onclick="switchLanguage()"
-          >
-            <span class="material-symbols-outlined">g_translate</span>
-          </button>
-
           <!-- botão de Toggle Navbar -->
           <button
             class="navbar-toggler d-flex align-items-center justify-content-center m-auto d-sm-none"
@@ -75,21 +68,23 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-
+          <!-- botão switch dos temas -->
           <button
             class="d-flex align-items-center navbar-toggler"
             onclick="switchTheme()"
             id="themeIcon"
+            
           >
             <span class="material-symbols-outlined"></span>
             <!-- botão de Switch Theme -->
           </button>
+
         </div>
       </div>
     </nav>
 
     <main
-      class="container col-sm-7 lg-6 mt-3 mb-3 p-3 d-flex flex-column bg-body-secondary"
+      class="container col-sm-7 lg-6 mt-3 mb-3 d-flex flex-column bg-body-secondary"
     >
       {% block main %}{% endblock %}
     </main>
@@ -115,16 +110,8 @@
         localStorage.setItem("theme", element.dataset.bsTheme);
       }
 
-      function switchLanguage() {
-        let lang = document.body;
-        lang.dataset.bsTranslation =
-          lang.dataset.bsTranslation == "pt-br" ? "en" : "pt-br";
-        localStorage.setItem("lang", lang.dataset.bsTranslation);
-      }
-
       const element = document.body;
       element.dataset.bsTheme = localStorage.getItem("theme");
-      element.dataset.bsTranslation = localStorage.getItem("lang");
 
       document.addEventListener("DOMContentLoaded", () => {
         const spn = document.querySelector("#themeIcon span");
@@ -142,4 +129,5 @@
     crossorigin="anonymous"
     ></script>
   </body>
+
 </html>

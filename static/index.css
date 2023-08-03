@@ -13,7 +13,7 @@ nav {
 
 /* Estilização do corpo da página */
 body {
-  background-image: url(/static/background_white.svg);
+  background-image: url(/static/Svgs/background.svg);
   background-size: cover;
   background-position: center;
   overflow-x: hidden;
@@ -31,7 +31,7 @@ main {
 /* Estilização dos botões da navbar */
 #navbarBtn button {
   width: 50px;
-  height: 50px;
+  aspect-ratio: 1;
 }
 
 /* Efeito hover nos botões, links e botões de acordeão */
@@ -45,15 +45,9 @@ main {
   transform: scale(0.9);
 }
 
-/* Estilização do logo do site */
-a#logoText {
-  color: #044884;
-  text-decoration: none;
-}
-
 /* Estilização do título de introdução */
-div h1#introText {
-  font-size: 48px;
+h1#introText {
+  font-size: 32px;
   margin: 3% 2% 0% 2%;
 }
 
@@ -85,7 +79,26 @@ div h1#introText {
 }
 
 /* Estilização das imagens dos cards e SVG */
-div .card img, svg {
+.card-img-top {
   width: 100%;
   height: 35vh;
+}
+
+picture img {
+  padding: 5%;
+}
+
+
+@media (max-width: 1024px) {
+  #textContent {
+    font-size: 16px;
+    text-align: center;
+    margin: 5%;
+  }
+  
+  h1#introText {
+    font-size: 28px;
+    margin: 3% 2% 0% 2%;
+  }
+
 }

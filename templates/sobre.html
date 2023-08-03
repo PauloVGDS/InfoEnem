@@ -6,29 +6,127 @@
 
 {% block main %}
 
-  <div class="container">
-    <h1 class="title">Olá, eu sou <span id="contrastWord">Paulo</span>!</h1>
+<!--
+<style>
+  * {
+    border: 1px solid white;
+  }
+</style>
+-->
+
+<div class="container">
+
+  <div class="firstContent row d-flex justify-content-center align-items-center mb-3" style="padding-top: 5%;">
+
+      <div class="col-md-4">
+
+        <h1 class="m-3">Paixão pela <span id="contrastWord">tecnologia</span> e por <span id="contrastWord">Aprender</span>!</h1>
+        <h3>Olá eu sou <span id="contrastWord">Paulo</span>, Técnico em Eletrônica e aspirante a Web Designer.</h3>
+    
+      </div>
+  
+      <div class="aboutImage col-md-6">
+    
+        <img src="/static/Svgs/homemCaminhando.svg" alt="Homem Caminhando sobre colunas" class="img-fluid">
+
+      </div>
+
+      <div id="textContent" class="text-center">
+        <p>O site foi feito dentro de um ambiente virtual Ubuntu pelo WSL integrado ao Virtual Studio Code.</p>
+        <p>Todo o processo de criação foi conectado a um repositório remoto no meu próprio Github com o intuito de controlar o versionamento.</p>
+      </div>
+
   </div>
 
-<!--
-  <div class="mb-4 lg-6 m-auto" style="max-width: 90%;">
-    <div class="row">
-      <div class="col-md-4 d-flex justify-content-center align-items-center p-4">
-        <img src="https://logodownload.org/wp-content/uploads/2015/02/enem-logo-4.png" class="img-fluid" alt="Enem Logo">
-      </div>
-      <div class="col-md-8">
-        <div class="body">
-          <h5 class="title">Motivo da Crianção:</h5>
-        <p>Estou me preparando para o vestibular logo preciso estudar para me sair bem. Pensando nisso resolvi criar um site que me ajudasse com isso, onde as matérias e conteúdos que preciso estudar estivessem bem organizadas.</p>
-        <p>Dessa forma resolvi dois problemas em um só, pois além das matérias organizadas da forma que eu precisava, fiz o trabalho de conclusão de curso do CS50 que a proposito foi um excelente curso do início ao fim.</p>
-        <p>Recomendo o CS50 a todos, pois foi um excelente curso que me deu uma base ótima para o mercado de trabalho ⭐️⭐️⭐️⭐️⭐️ </p>
+  <div class="secondContent row d-flex justify-content-center align-items-center" style="background-color: #044884; border-radius: 10px 10px 0 0; padding-top: 5%;">
+
+    <div class="col-md-4" style="color: white;">
+
+      <h1 class="m-3">Tecnologias usadas:</h1>
+  
+    </div>
+
+    <div class="aboutImage col-md-6">
+  
+      <img src="/static/Svgs/homemSentado.svg" alt="Homem Sentado mexendo no computador" class="img-fluid">
+  
+    </div>
+
+    <div id="textContent" class="text-center" style="color: white;">
+      <p>O site foi feito dentro de um ambiente virtual Ubuntu pelo WSL integrado ao Virtual Studio Code.</p>
+      <p>Todo o processo de criação foi conectado a um repositório remoto no meu próprio Github com o intuito de controlar o versionamento.</p>
+      <p>A maioria das figuras e o layout do site foi feito e pensado no Figma!</p>
+    </div>
+
+    <div class="row" style="color: white; padding: 5%;">
+
+      <div class="col-md-6" style="margin-bottom: 10%;">
+        <picture>
+          <source media="(max-width: 800px)" srcset="/static/Flask Logo Small.png">
+
+          <img src="/static/Images/Flask Logo.png" class="card-img-top" alt="Imagem da Logo do Flask">
+        </picture>
+        
+        <div class="card-body">
+          <h5 class="card-title">Flask</h5>
+          <p class="card-text">O Flask é um microframework web gratuito e de código aberto escrito em Python. É uma estrutura leve e flexível que é adequada para criar aplicações web simples e complexas.</p>
         </div>
       </div>
+
+      <div class="col-md-6">
+        <picture>
+          <source media="(max-width: 800px)" srcset="/static/Svgs/Bootstrap Logo Small.svg">
+
+          <img src="/static/Images/Bootstrap Logo.png" class="card-img-top" alt="Imagem da Logo do Bootstrap">
+        </picture>
+        
+        <div class="card-body">
+          <h5 class="card-title">Bootstrap</h5>
+          <p class="card-text">O Bootstrap é um framework CSS gratuito e aberto que pode ser usado para criar sites e aplicativos web responsivos. Ele fornece uma ampla gama de componentes de interface do usuário, incluindo botões, menus, formulários e muito mais. </p>
+        </div>
+      </div>
+      
+
     </div>
+
+      <!--
+      <div class="card mt-3 mb-3">
+        <div class="card-header" style="color: #044884;">
+          Frase Motivacional
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0" style="color: #044884;">
+            <p>Eu vou encontrar um caminho ou faze-lo com minhas próprias mãos.</p>
+            <footer class="blockquote-footer" style="color: #044884;">Hannibal</footer>
+          </blockquote>
+        </div>
+      </div>
+      -->
+
   </div>
--->
+
+  <div class="thirdContent row d-flex justify-content-center align-items-center mb-3" style="background-color: black; border-radius: 0 0 10px 10px;">
+
+    <div class="aboutImage col-md-6">
+      
+      <img src="/static/Svgs/HomemSentadoPensando.svg" alt="Homem sentado pensando" class="img-fluid">
+        
+    </div>
+
+    <div class="col-md-4" style="color: white;">
+
+      <h1 id="introText" >Meus <span id="contrastWord">conhecimentos!</span></h1>
+  
+    </div>
+
+
+
+
+  </div>
+
+</div>
+
     <!-- Script para estilização do botão da página atual -->
-    
     <script>
         let el = document.querySelector('#aboutAnchor')
         el.style['font-weight'] = '700'
