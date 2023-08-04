@@ -35,7 +35,7 @@ main {
 }
 
 /* Efeito hover nos botões, links e botões de acordeão */
-#navbarBtn button:hover, a:hover, a.nav-link:hover, button.accordion-button:hover {
+#navbarBtn button:hover, a:hover, a.nav-link:hover, button.accordion-button:hover, ul li a.nav-link:hover {
   transform: scale(1);
   color: #044884;
 }
@@ -102,3 +102,4 @@ picture img {
   }
 
 }
+

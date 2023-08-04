@@ -6,132 +6,230 @@
 
 {% block main %}
 
-<!--
-<style>
-  * {
-    border: 1px solid white;
-  }
-</style>
--->
+  <div class="container">
 
-<div class="container">
+    <div class="firstContent row d-flex justify-content-center align-items-center mb-3" style="padding-top: 5%;">
 
-  <div class="firstContent row d-flex justify-content-center align-items-center mb-3" style="padding-top: 5%;">
+        <div class="col-md-4">
+
+          <h1 class="m-3">Paixão pela <span id="contrastWord">tecnologia</span> e por <span id="contrastWord">Aprender</span>!</h1>
+          <h3>Olá eu sou <span id="contrastWord">Paulo</span>, Técnico em Eletrônica e aspirante a Web Designer.</h3>
+      
+        </div>
+    
+        <div class="aboutImage col-md-6">
+      
+          <img src="/static/Svgs/homemCaminhando.svg" alt="Homem Caminhando sobre colunas" class="img-fluid">
+
+        </div>
+
+        <div id="textContent" class="text-center">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+    </div>
+
+    <div class="secondContent row d-flex justify-content-center align-items-center" style="background-color: #044884; border-radius: 10px 10px 0 0; padding-top: 5%;">
+
+      <div class="col-md-4" style="color: white;">
+
+        <h1 class="m-3">Tecnologias usadas:</h1>
+    
+      </div>
+
+      <div class="aboutImage col-md-6">
+    
+        <img src="/static/Svgs/homemSentado.svg" alt="Homem Sentado mexendo no computador" class="img-fluid">
+    
+      </div>
+
+      <div id="textContent" class="text-center" style="color: white;">
+        <p>O site foi feito dentro de um ambiente virtual Ubuntu pelo WSL integrado ao Virtual Studio Code.</p>
+        <p>Todo o processo de criação foi conectado a um repositório remoto no meu próprio Github com o intuito de controlar o versionamento.</p>
+        <p>A maioria das figuras e o layout do site foi feito e pensado no Figma!</p>
+      </div>
+
+      <div class="row" style="color: white; padding: 5%;">
+
+        <div class="col-md-6" style="margin-bottom: 10%;">
+          <picture>
+            <source media="(max-width: 800px)" srcset="/static/Flask Logo Small.png">
+
+            <img src="/static/Images/Flask Logo.png" class="card-img-top" alt="Imagem da Logo do Flask">
+          </picture>
+          
+          <div class="card-body">
+            <h5 class="card-title">Flask</h5>
+            <p class="card-text">O Flask é um microframework web gratuito e de código aberto escrito em Python. É uma estrutura leve e flexível que é adequada para criar aplicações web simples e complexas.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <picture>
+            <source media="(max-width: 800px)" srcset="/static/Svgs/Bootstrap Logo Small.svg">
+
+            <img src="/static/Images/Bootstrap Logo.png" class="card-img-top" alt="Imagem da Logo do Bootstrap">
+          </picture>
+          
+          <div class="card-body">
+            <h5 class="card-title">Bootstrap</h5>
+            <p class="card-text">O Bootstrap é um framework CSS gratuito e aberto que pode ser usado para criar sites e aplicativos web responsivos. Ele fornece uma ampla gama de componentes de interface do usuário, incluindo botões, menus, formulários e muito mais. </p>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+
+    <div class="thirdContent row d-flex justify-content-center align-items-center mb-3" style="background-color: black; border-radius: 0 0 10px 10px; color: white;">
+
+      <div class="aboutImage col-md-6">
+        
+        <img src="/static/Svgs/HomemSentadoPensando.svg" alt="Homem sentado pensando" class="img-fluid">
+          
+      </div>
 
       <div class="col-md-4">
 
-        <h1 class="m-3">Paixão pela <span id="contrastWord">tecnologia</span> e por <span id="contrastWord">Aprender</span>!</h1>
-        <h3>Olá eu sou <span id="contrastWord">Paulo</span>, Técnico em Eletrônica e aspirante a Web Designer.</h3>
+        <h1 class="m-3 text-center"><span id="contrastWord">Meu Conhecimento</span></h1>
     
       </div>
-  
-      <div class="aboutImage col-md-6">
-    
-        <img src="/static/Svgs/homemCaminhando.svg" alt="Homem Caminhando sobre colunas" class="img-fluid">
+
+      <div class="row" style="margin: 5% 0% 5% 0%;">   
+
+        <div class="accordion" id="accordionExample">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Linguagens de Programação
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="row">
+
+                  <div class="col-md-4">
+
+                    <img src="/static/Images/Python Logo.png" class="card-img-top" alt="Imagem da Logo do Python">
+              
+                    <div class="card-body">
+                      <h5 class="card-title">Python</h5>
+                    </div>
+            
+                  </div>
+            
+                  <div class="col-md-4">
+            
+                    <img src="/static/Images/C Lang.png" class="card-img-top" alt="Imagem da Logo da Linguagem C">
+                    
+                    <div class="card-body">
+                      <h5 class="card-title">Linguagem C</h5>
+                    </div>
+            
+                  </div>
+            
+                  <div class="col-md-4">
+                    
+                    <img src="/static/Svgs/Javascript Logo.svg" class="card-img-top" alt="Imagem da Logo do Javascript">
+                    
+                    <div class="card-body">
+                      <h5 class="card-title">Javascript</h5>
+                    </div>
+            
+                  </div>
+
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Layout e Estilização
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="row">
+
+                  <div class="col-md-6">
+                    <img src="/static/Images/HTML5 Logo.png" alt="Logo do HTML" class="img-fluid">
+                  </div>
+            
+                  <div class="col-md-6">
+                    <img src="/static/Images/CSS3 Logo.jpg" alt="Logo do CSS" class="img-fluid">
+                  </div>
+
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Complementos
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+
+              <div class="row d-flex align-items-center justify-content-center">
+
+                <div class="col-md-4">
+
+                  <img src="/static/Images/SQL Logo.png" class="card-img-top img-fluid" alt="Imagem da Logo do MySQL">
+            
+                  <div class="card-body">
+                    <h5 class="card-title">MySQL</h5>
+                  </div>
+          
+                </div>
+          
+                <div class="col-md-4">
+                  
+                  <img src="/static/Images/Figma Logo.png" class="card-img-top img-fluid" alt="Imagem da Logo do Figma">
+                  
+                  <div class="card-body">
+                    <h5 class="card-title">Figma</h5>
+                  </div>
+                  
+                </div>
+
+                <div class="col-md-4">
+          
+                  <img src="/static/Images/Github Logo.png" class="card-img-top img-fluid" alt="Imagem do Github" style="background-color: black; aspect-ratio: 4/3; border-radius: 5px;">
+                  
+                  <div class="card-body">
+                    <h5 class="card-title">GitHub</h5>
+                  </div>
+          
+                </div>
+                
+              </div>
+
+            </div>
+          </div>
+
+        </div>
 
       </div>
 
-      <div id="textContent" class="text-center">
-        <p>O site foi feito dentro de um ambiente virtual Ubuntu pelo WSL integrado ao Virtual Studio Code.</p>
-        <p>Todo o processo de criação foi conectado a um repositório remoto no meu próprio Github com o intuito de controlar o versionamento.</p>
-      </div>
+    </div>
 
   </div>
 
-  <div class="secondContent row d-flex justify-content-center align-items-center" style="background-color: #044884; border-radius: 10px 10px 0 0; padding-top: 5%;">
-
-    <div class="col-md-4" style="color: white;">
-
-      <h1 class="m-3">Tecnologias usadas:</h1>
-  
-    </div>
-
-    <div class="aboutImage col-md-6">
-  
-      <img src="/static/Svgs/homemSentado.svg" alt="Homem Sentado mexendo no computador" class="img-fluid">
-  
-    </div>
-
-    <div id="textContent" class="text-center" style="color: white;">
-      <p>O site foi feito dentro de um ambiente virtual Ubuntu pelo WSL integrado ao Virtual Studio Code.</p>
-      <p>Todo o processo de criação foi conectado a um repositório remoto no meu próprio Github com o intuito de controlar o versionamento.</p>
-      <p>A maioria das figuras e o layout do site foi feito e pensado no Figma!</p>
-    </div>
-
-    <div class="row" style="color: white; padding: 5%;">
-
-      <div class="col-md-6" style="margin-bottom: 10%;">
-        <picture>
-          <source media="(max-width: 800px)" srcset="/static/Flask Logo Small.png">
-
-          <img src="/static/Images/Flask Logo.png" class="card-img-top" alt="Imagem da Logo do Flask">
-        </picture>
-        
-        <div class="card-body">
-          <h5 class="card-title">Flask</h5>
-          <p class="card-text">O Flask é um microframework web gratuito e de código aberto escrito em Python. É uma estrutura leve e flexível que é adequada para criar aplicações web simples e complexas.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <picture>
-          <source media="(max-width: 800px)" srcset="/static/Svgs/Bootstrap Logo Small.svg">
-
-          <img src="/static/Images/Bootstrap Logo.png" class="card-img-top" alt="Imagem da Logo do Bootstrap">
-        </picture>
-        
-        <div class="card-body">
-          <h5 class="card-title">Bootstrap</h5>
-          <p class="card-text">O Bootstrap é um framework CSS gratuito e aberto que pode ser usado para criar sites e aplicativos web responsivos. Ele fornece uma ampla gama de componentes de interface do usuário, incluindo botões, menus, formulários e muito mais. </p>
-        </div>
-      </div>
-      
-
-    </div>
-
-      <!--
-      <div class="card mt-3 mb-3">
-        <div class="card-header" style="color: #044884;">
-          Frase Motivacional
-        </div>
-        <div class="card-body">
-          <blockquote class="blockquote mb-0" style="color: #044884;">
-            <p>Eu vou encontrar um caminho ou faze-lo com minhas próprias mãos.</p>
-            <footer class="blockquote-footer" style="color: #044884;">Hannibal</footer>
-          </blockquote>
-        </div>
-      </div>
-      -->
-
-  </div>
-
-  <div class="thirdContent row d-flex justify-content-center align-items-center mb-3" style="background-color: black; border-radius: 0 0 10px 10px;">
-
-    <div class="aboutImage col-md-6">
-      
-      <img src="/static/Svgs/HomemSentadoPensando.svg" alt="Homem sentado pensando" class="img-fluid">
-        
-    </div>
-
-    <div class="col-md-4" style="color: white;">
-
-      <h1 id="introText" >Meus <span id="contrastWord">conhecimentos!</span></h1>
-  
-    </div>
-
-
-
-
-  </div>
-
-</div>
-
-    <!-- Script para estilização do botão da página atual -->
-    <script>
-        let el = document.querySelector('#aboutAnchor')
-        el.style['font-weight'] = '700'
-        el.style.color = '#044884'
-        el.style["box-shadow"] = "0px 0px 8px #044884"
-        el.style["border-radius"] = '5px'
-    </script>
+  <!-- Script para estilização do botão da página atual -->
+  <script>
+      let el = document.querySelector('#aboutAnchor')
+      el.style['font-weight'] = '700'
+      el.style.color = '#044884'
+      el.style["box-shadow"] = "0px 0px 8px #044884"
+      el.style["border-radius"] = '5px'
+  </script>
 {% endblock %}
