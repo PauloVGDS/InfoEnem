@@ -6,104 +6,190 @@
 
 {% block main %}
 
-    <div>
-        <h1>Contato</h1>
-        <form class="row g-3 needs-validation" novalidate>
-            <div class="col-md-4">
-              <label for="validationCustom01" class="form-label">First name</label>
-              <input type="text" class="form-control" id="validationCustom01" required>
-              <div class="valid-feedback">
-                Looks good!
-              </div>
+
+  <div>
+
+    <div class="firstContent m-md-5 mt-5 mb-5">
+      <h1 class="text-center m-3" id="introText"> <span id="contrastWord">Redes Sociais</span></h1>
+
+      <div class="card-group" id="socialMedias">
+
+        <div class="card m-3" style="border-radius: 10px;">
+
+            <a href="#" rel="noopener noreferrer">
+              <img src="/static/Svgs/Whats-Logo.svg" alt="Logo do Whatsapp" class="img-fluid card-img">
+            </a>
+            
+        </div>
+
+        <div class="card m-3" style="border-radius: 10px;">
+
+          <a href="http://t.me/PauloVGDS" target="_blank" rel="noopener noreferrer">
+            <img src="/static/Svgs/Tele-Logo.svg" alt="Logo do Telegram" class="img-fluid card-img">
+          </a>
+
+        </div>
+
+        <div class="card m-3" style="border-radius: 10px;">
+
+          <a href="http://github.com/PauloVGDS" target="_blank" rel="noopener noreferrer">
+            <img src="/static/Svgs/Github-Logo.svg" alt="Logo do GitHub" class="img-fluid card-img">
+          </a>
+            
+        </div>
+
+        <div class="card m-3" style="border-radius: 10px;">
+          
+            <a href="https://www.instagram.com/paulo_gomes1732" target="_blank" rel="noopener noreferrer">
+              <img src="/static/Svgs/Insta-Logo.svg" alt="Logo do Instagram" class="img-fluid card-img">  
+            </a>
+            
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="secondContent m-md-5 mt-5 mb-5">
+
+      <!-- Título 2 -->
+      <h1 class="text-center m-3" id="introText"><span id="contrastWord">Fale comigo</span></h1>
+
+      <!-- Formulário para contato -->
+      <form class="row g-4 needs-validation" novalidate method="post" action="#">
+
+        <div class="col-md-6">
+          <label for="nameValidation" class="form-label">*Seu Nome:</label>
+          <input type="text" class="form-control" id="nameValidation" name="nome" required>
+
+          <div class="invalid-feedback">
+            Por favor, coloque o seu nome.
+          </div>
+          <div class="valid-feedback">
+            Parece bom!
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label for="sexValidation" class="form-label">*Sexo:</label>
+          <select name="sexo" id="sexValidation" class="form-control">
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
+          </select>
+
+          <div class="invalid-feedback">
+            Por favor, coloque o seu sexo.
+          </div>
+          <div class="valid-feedback">
+            Ótimo!
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label for="ageValidation" class="form-label">*Idade:</label>
+          <input type="number" name="idade" id="ageValidation" min="0" max="100" class="form-control" required>
+
+          <div class="invalid-feedback">
+            Por favor, coloque sua idade.
+          </div>
+          <div class="valid-feedback">
+            Ótimo!
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="emailValidation" class="form-label">*Email</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="email" class="form-control" id="emailValidation" name="email" aria-describedby="inputGroupPrepend" required>
+
+            <div class="invalid-feedback">
+              Por favor, coloque um email válido.
             </div>
-            <div class="col-md-4">
-              <label for="validationCustom02" class="form-label">Last name</label>
-              <input type="text" class="form-control" id="validationCustom02" required>
-              <div class="valid-feedback">
-                Looks good!
-              </div>
+            <div class="valid-feedback">
+              Parece bom!
             </div>
-            <div class="col-md-4">
-              <label for="validationCustomUsername" class="form-label">Username</label>
-              <div class="input-group has-validation">
-                <span class="input-group-text" id="inputGroupPrepend">@</span>
-                <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                <div class="invalid-feedback">
-                  Please choose a username. Mark
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="phoneValidation" class="form-label">*Telefone</label>
+          <div class="input-group has-validation">
+            <input type="number" class="form-control" id="phoneValidation" name="telefone" aria-describedby="inputGroupPrepend" min="34000000000" required>
+
+            <div class="invalid-feedback">
+              Por favor, coloque um telefone válido.
+            </div>
+            <div class="valid-feedback">
+              Parece bom!
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <label for="optionalMessage" class="form-label">Mensagem</label>
+          <textarea class="form-control" id="optionalMessage" rows="3" name="mensagem"></textarea>
+        </div>
+        
+        <div class="col-12 d-flex justify-content-center">
+
+          <!-- Button trigger modal -->
+          <button type="submit" class="btn btn-primary" id="submitButton" data-bs-toggle="modal" data-bs-target="#Modal">
+            Enviar
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade valid-feedback" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="ModalLabel">Sucesso</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                  Formulário enviado com sucesso!
+                </div>
+                <div class="modal-footer d-flex align-items-center justify-content-center">
+                  <button type="button" class="btn btn-primary" id="submitButton" data-bs-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <label for="validationCustom03" class="form-label">City</label>
-              <input type="text" class="form-control" id="validationCustom03" required>
-              <div class="invalid-feedback">
-                Please provide a valid city.
-              </div>
-            </div>
-            <div class="col-md-3">
-              <label for="validationCustom04" class="form-label">State</label>
-              <select class="form-select" id="validationCustom04" required>
-                <option selected disabled value="">Choose...</option>
-                <option>...</option>
-              </select>
-              <div class="invalid-feedback">
-                Please select a valid state.
-              </div>
-            </div>
-            <div class="col-md-3">
-              <label for="validationCustom05" class="form-label">Zip</label>
-              <input type="text" class="form-control" id="validationCustom05" required>
-              <div class="invalid-feedback">
-                Please provide a valid zip.
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                <label class="form-check-label" for="invalidCheck">
-                  Agree to terms and conditions
-                </label>
-                <div class="invalid-feedback">
-                  You must agree before submitting.
-                </div>
-              </div>
-            </div>
-            <div class="col-12">
-              <button class="btn btn-primary" type="submit" id="submitButton">Submit form</button>
-            </div>
-        </form>
+          </div>
+
+        </div>
+
+      </form>
 
     </div>
- 
-    <!-- Script para validão do formulário-->
-    <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (() => {
-        'use strict'
 
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        const forms = document.querySelectorAll('.needs-validation')
+  </div>
 
-        // Loop over them and prevent submission
-        Array.from(forms).forEach(form => {
-            form.addEventListener('submit', event => {
-            if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-            }
+  <!-- Script para validão do formulário-->
+  <script>
+      (() => {
+      'use strict'
+  
+      const forms = document.querySelectorAll('.needs-validation')
 
-            form.classList.add('was-validated')
-            }, false)
-        })
-        })()
-    </script>
+      Array.from(forms).forEach(form => {
+          form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+          }
 
-    <!-- Script para estilização do botão da página atual -->
-    <script>
-        let el = document.querySelector('#contactAnchor')
-        el.style['font-weight'] = '700'
-        el.style.color = '#044884'
-        el.style["box-shadow"] = "0px 0px 8px #044884"
-        el.style["border-radius"] = '5px'
-    </script>
+          form.classList.add('was-validated')
+          }, false)
+      })
+      })()
+  </script>
+
+  <!-- Script para estilização do botão da página atual -->
+  <script>
+      let el = document.querySelector('#contactAnchor')
+      el.style['font-weight'] = '700'
+      el.style.color = '#044884'
+      el.style["box-shadow"] = "0px 0px 8px #044884"
+      el.style["border-radius"] = '5px'
+  </script>
 {% endblock %}

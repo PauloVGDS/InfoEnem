@@ -47,7 +47,7 @@ main {
 
 /* Estilização do título de introdução */
 h1#introText {
-  font-size: 32px;
+  font-size: 42px;
   margin: 3% 2% 0% 2%;
 }
 
@@ -103,3 +103,7 @@ picture img {
 
 }
 
+
+#socialMedias div.card:hover {
+  transform: scale(1.1);
+}

@@ -82,20 +82,20 @@
         </div>
       </div>
     </nav>
-
+    <!-- Main Content -->
     <main
       class="container col-sm-7 lg-6 mt-3 mb-3 d-flex flex-column bg-body-secondary"
     >
       {% block main %}{% endblock %}
     </main>
-
+    <!-- Footer -->
     <div class="bg-body-secondary ml-auto mr-auto">
 
       <footer class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <p class="col-md-4 mb-0 text-body-secondary m-auto">© 2023 INEP Enem</p>
     
         <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-          <img src="/static/Images/Enem Logo.png" alt="Logo Enem" class="col-md-4 mb-0 text-body-secondary img-fluid">
+          <img src="/static/Images/Enem Logo.png" alt="Logo Enem" class="col-md-4 mb-0 text-body-secondary">
         </a>
     
         <ul class="nav col-md-4 justify-content-end m-auto">
@@ -108,7 +108,6 @@
 
     </div>
     
-
     <script>
       const page = document.location.pathname;
       localStorage.setItem("currentPage", page.substring(1, page.length));
@@ -128,17 +127,17 @@
         localStorage.setItem("theme", element.dataset.bsTheme);
       }
 
-      const element = document.body;
-      element.dataset.bsTheme = localStorage.getItem("theme");
-
       document.addEventListener("DOMContentLoaded", () => {
         const spn = document.querySelector("#themeIcon span");
         spn.textContent =
           localStorage.getItem("theme") == "light" ? "dark_mode" : "light_mode";
 
-      });
+        const element = document.body;
+        element.dataset.bsTheme = 
+          localStorage.getItem("theme");
 
-      
+      });
+  
     </script>
 
     <script
