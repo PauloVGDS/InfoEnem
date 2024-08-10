@@ -1,46 +1,23 @@
 from flask import Flask, render_template, request, redirect
-from cs50 import SQL
 
 
 
 app = Flask(__name__)
-
+if __name__ == "__main__":
+    app.run(debug=True)
 
 # The server can be initialized with 'Flask.run()'.
 # Debug mode can be activated with 'debug=True'.
 # Apparently we can use 'port' to specify the port of the server
-db = SQL("sqlite:///registers.db")
-
-
-def insertData(nome, sexo, idade, email, telefone, msg):
-    try: 
-        db.execute("INSERT INTO registros (Nome, Idade, Sexo, Email, Mensagem, Telefone) VALUES (?, ?, ?, ?, ?, ?)", nome, idade, sexo, email, msg, telefone);
-    
-    except Exception as e:
-        return print(f"Erro: {e}")
-    
-        
 
 @app.route("/")
 def index():
     return render_template("index.html")
 
 
-@app.route("/contato", methods=['GET', 'POST']) # type: ignore
+@app.route("/contato")
 def materias():
-    if request.method == "GET":
-        return render_template("contato.html")
-    else:
-
-        insertData(
-                nome=request.form.get("nome"),
-                sexo=request.form.get("sexo"),
-                idade = request.form.get("idade"),
-                email = request.form.get("email"),
-                telefone = request.form.get("telefone"),
-                msg = request.form.get("mensagem")
-            )
-        return redirect("#")
+    return render_template("contato.html")
 
 
 @app.route("/sobre")
